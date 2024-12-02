@@ -1,6 +1,6 @@
-package com.willmear.repository;
+package com.willmear.goodreads.repository;
 
-import com.willmear.domain.entity.User;
+import com.willmear.goodreads.domain.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

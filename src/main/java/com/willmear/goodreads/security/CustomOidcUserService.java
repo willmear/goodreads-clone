@@ -1,8 +1,8 @@
-package com.willmear.security;
+package com.willmear.goodreads.security;
 
-import com.willmear.domain.entity.User;
-import com.willmear.domain.model.Oauth2UserInfoDto;
-import com.willmear.repository.UserRepository;
+import com.willmear.goodreads.domain.entity.User;
+import com.willmear.goodreads.domain.model.Oauth2UserInfoDto;
+import com.willmear.goodreads.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +59,7 @@ public class CustomOidcUserService extends OidcUserService {
         user.setName(userInfoDto.getName());
         user.setEmail(userInfoDto.getEmail());
         user.setProfileImageUrl(userInfoDto.getPicture());
+//        Set read, want to read and reading
         return userRepository.save(user);
     }
 

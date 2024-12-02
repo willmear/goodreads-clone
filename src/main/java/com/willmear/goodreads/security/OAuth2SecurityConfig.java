@@ -1,4 +1,4 @@
-package com.willmear.security;
+package com.willmear.goodreads.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +33,7 @@ public class OAuth2SecurityConfig {
                                 .oidcUserService(customOidcUserService)
                         ))
                 .sessionManagement((session) -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                        .sessionCreationPolicy(SessionCreationPolicy.ALWAYS));
 
         return http.build();
     }

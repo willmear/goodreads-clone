@@ -1,4 +1,4 @@
-package com.willmear.domain.model;
+package com.willmear.goodreads.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
