@@ -6,25 +6,17 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table
-public class Book {
+public class Comment {
     @Id
     @GeneratedValue
     private Long id;
-    private String isbn;
-    private String bookTitle;
     @ManyToOne
-    private Author bookAuthor;
-    private Integer yearOfPublication;
-    private String publisher;
-    private String imageUrlS;
-    private String imageUrlM;
-    private String imageUrlL;
+    private User user;
+    private String text;
 }
